@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha(){
+
+            document.write("<br><br>")
+        }
+
+        function texto (texto){
+            document.write(texto)
+            pulaLinha();
+        }
+
+        var a = 10;
+        var b = 20;
+        var troca = b;
+
+        texto("Valor de a = " +a);
+        texto ("Valor de b = " +b);
+        pulaLinha();
+
+        texto("Valor de a " + a + " será trocado com valor de b " + b);
+        var b = a
+        texto("Novo valor de a " + troca + " novo valor de b " + b)
+
+    </script>
+</body>
+</html>

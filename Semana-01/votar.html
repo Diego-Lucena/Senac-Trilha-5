@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+
+<body>
+    <script>
+
+        function validaIdadeVotar(idade) {
+
+            if (idade > 17 && idade <= 70) {
+                document.write("<br> Sua idade é " + idade + " anos")
+                document.write("<br> A votação é obrigatória.")
+            }
+            else if (idade > 70 || idade == 16 || idade == 17) {
+                document.write("<br> Sua idade é " + idade + " anos")
+                document.write("<br> A votação é opcional.")
+            }
+            else if (idade < 16) {
+                document.write("<br> Sua idade é " + idade + " anos")
+                document.write("<br> Você não pode votar.")
+            }
+
+        }
+
+        function digiteIdade() {
+
+            let idade = parseInt(prompt("Digite a sua idade"))
+            validaIdadeVotar(idade);
+        }
+
+        digiteIdade();
+
+
+    </script>
+</body>
+
+</html>
