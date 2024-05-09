@@ -11,7 +11,7 @@ VALUES (5, 'BI', 'D999','08/05/2024','22/12/2024');
 -- Inserido  papel
 INSERT INTO BRH.PAPEL
 (ID, NOME)
-VALUES (8, 'Especialista de Neg�cios');
+VALUES (8, 'Especialista de Negócios');
 
 -- Inserido  celular
 INSERT INTO BRH.TELEFONE_COLABORADOR
@@ -41,6 +41,4 @@ VALUES ('999.999.999.99', 'Filha Beltrana de Tal', '07/04/2025', 'Filho(a)', 'G7
 -- Inserido  esposa
 INSERT INTO BRH.DEPENDENTE
 (CPF, NOME, DATA_NASCIMENTO, PARENTESCO, COLABORADOR)
-VALUES ('999.999.999.98', 'Esposa Cicrana de Tal', '20/07/1993', 'Cônjuge', 'G789');
-
-UPDATE BRH.DEPENDENTE SET CPF = '999.999.999.99' WHERE NOME = 'Gabriel' and DATA_NASCIMENTO = '07/04/25';
+VALUES ('999.999.999.98', 'Esposa Cicrana de Tal', '20/07/1993', 'CÃ´njuge', 'G789');
