@@ -47,4 +47,16 @@ BEGIN
 END;
 
 --=============================================================================
+CREATE OR REPLACE PROCEDURE brh.insere_projeto (
+    p_nome IN VARCHAR2,
+    p_responsavel IN VARCHAR2
+) AS
+BEGIN
+    IF p_nome IS NULL OR LENGTH(p_nome) < 2 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Nome de projeto inválido! Deve ter dois ou mais caracteres.');
+    END IF;
 
+    INSERT INTO projeto (nome, responsavel)
+    VALUES (p_nome, p_responsavel);
+    COMMIT;
+END;
