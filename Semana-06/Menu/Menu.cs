@@ -1,8 +1,11 @@
-﻿namespace Semana06.Modelos;
+﻿namespace Comex.Semana06.Menu;
+using Comex.Semana06.Produto;
+using Semana_06.API;
+using System.Text.Json;
 
 internal class Menu
 {
-    List<Produto> listaDeProdutos = new List<Produto>();
+    List<Produto> listaDeProdutos = new();
 
     void ExibirLogo()
     {
@@ -39,8 +42,9 @@ internal class Menu
         Console.Clear();
         ExibirLogo();
         Console.WriteLine("\nDigite 1 para cadastrar Produto");
-        Console.WriteLine("Digite 2 para listar os produtos");        
-        Console.WriteLine("Digite 3 para sair");
+        Console.WriteLine("Digite 2 para listar os produtos");
+        Console.WriteLine("Digite 3 para lista de produtos externo");
+        Console.WriteLine("Digite 4 para sair");
         Console.Write("\nDigite a sua opção: ");
         int opcaoEscolhida = int.Parse(Console.ReadLine()!);
 
@@ -53,6 +57,9 @@ internal class Menu
                 ListarProdutos();
                 break;           
             case 3:
+                BuscaProdutoExterna();
+                break;
+            case 4:
                 Console.WriteLine($"Precione 'Enter' para encerrar");
                 break;
             default:
@@ -108,5 +115,23 @@ internal class Menu
         Console.WriteLine("\nDigite uma tecla para voltar ao menur principal");
         Console.ReadKey();
         Opcoes();
+    }
+
+    public void BuscaProdutoExterna()
+    {
+        Console.Clear();
+        ExibirTitulo("Lista de Produtos Externo:");
+        ClienteApi requisicao = new ClienteApi();
+        var resultado = requisicao.conexao().Result;
+        var listaDeProdutos = JsonSerializer.Deserialize<List<Produto>>(resultado)!;
+        foreach (var produto in listaDeProdutos)
+        {
+            Console.WriteLine($"Produto: {produto.Nome}\n" +
+            $"Descrição: {produto.Descricao}\n" +
+            $"Preço: {produto.Preco_unitario}\n");
+        }
+        Console.ReadKey();
+        Opcoes();
+
     }
 }

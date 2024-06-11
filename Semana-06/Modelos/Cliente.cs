@@ -1,5 +1,7 @@
-namespace Semana06.Modelos;
-internal class Cliente
+using Semana_06.Interface;
+
+namespace Comex.Semana06.Produto;
+internal class Cliente : Iidentifica
 {
         public Cliente (string nome, string cpf, string email)
     {
@@ -18,6 +20,12 @@ internal class Cliente
     public void DadosDoCliente()
     {
         Console.WriteLine($"O cliente {Nome} reside na cidade de {Endereco.Cidade}, localizado na rua {Endereco.Rua}");
+    }
+
+    public string Identificar()
+    {
+        return $"Nome: {Nome} CPF: {Cpf}";
+
     }
 
 }

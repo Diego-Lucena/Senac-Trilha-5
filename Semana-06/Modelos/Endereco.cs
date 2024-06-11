@@ -1,4 +1,4 @@
-namespace Semana06.Modelos;
+namespace Comex.Semana06.Produto;
 internal class Endereco
 {
     public string Rua {get;set;}
