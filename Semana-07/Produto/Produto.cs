@@ -22,7 +22,7 @@ internal class Produto
     [JsonPropertyName("description")]
     public string Descricao { get; set; }
     [JsonPropertyName("price")]
-    public float Preco_unitario { get; set; }
+    public double Preco_unitario { get; set; }
     public int Quantidade { get; set; }
     public string InformacaoResumida => $"Nome do produto {Nome}, sestá é a descrição {Descricao}, preço unitario {Preco_unitario}, quantidade {Quantidade}.";
 

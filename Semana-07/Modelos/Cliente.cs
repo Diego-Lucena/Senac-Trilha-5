@@ -3,7 +3,14 @@ using Semana_06.Interface;
 namespace Comex.Semana06.Produto;
 internal class Cliente : Iidentifica
 {
-        public Cliente (string nome, string cpf, string email)
+    private string? nomeCliente;
+
+    public Cliente(string? nomeCliente)
+    {
+        this.nomeCliente = nomeCliente;
+    }
+
+    public Cliente (string nome, string cpf, string email)
     {
         Nome = nome;
         Cpf = cpf;
