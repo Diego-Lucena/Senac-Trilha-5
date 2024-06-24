@@ -1,13 +1,8 @@
 ﻿using Comex.Semana06.Produto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Semana_05.Modelos
 {
-    internal class Pedido
+    public class Pedido
     {
         public Pedido(Cliente cliente)
         {

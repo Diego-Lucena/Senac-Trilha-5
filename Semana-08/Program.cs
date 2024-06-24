@@ -1,5 +1,5 @@
-﻿using Comex.Semana06.Produto;
-using Comex.Semana06.Menu;
+﻿using Comex.Semana06.Menu;
+using Comex.Semana06.Produto;
 
 internal class Program
 {

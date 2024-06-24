@@ -1,6 +1,6 @@
 ﻿namespace Semana_06.Interface
 {
-    internal interface Iidentifica
+    public interface Iidentifica
     {
         string Identificar();
     }

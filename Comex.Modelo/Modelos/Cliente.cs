@@ -1,6 +1,6 @@
-using Semana_06.Interface;
+using Semana_08.Interface;
 
-namespace Comex.Semana06.Produto;
+namespace Comex.Semana08.Produto;
 internal class Cliente : Iidentifica
 {
     private string? nomeCliente;

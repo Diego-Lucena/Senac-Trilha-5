@@ -1,7 +1,7 @@
 ﻿namespace Semana_06.API
 
 {
-    internal class ClienteApi
+    public class ClienteApi
     {
         HttpClient client = new HttpClient();
 

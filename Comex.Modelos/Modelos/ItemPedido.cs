@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Semana_05.Modelos
 {
-    internal class ItemPedido
+    public class ItemPedido
     {
         public ItemPedido(Produto produto, int quantidade)
         {
